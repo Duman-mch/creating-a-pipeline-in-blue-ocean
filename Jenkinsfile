@@ -13,34 +13,5 @@ pipeline {
       }
     }
 
-    stage('Test') {
-      steps {
-        sh './jenkins/scripts/test.sh'
-      }
-    }
-
-    stage('Docker publish') {
-      steps {
-        script {
-          docker.withRegistry( '', registryCredential ) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-            dockerImage.push() }
-          }
-
-        }
-      }
-
-    }
   }
+}
